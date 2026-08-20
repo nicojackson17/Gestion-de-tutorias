@@ -149,9 +149,9 @@ El proyecto se encuentra en proceso de desarrollo y puede incorporar nuevas func
 
 Proyecto desarrollado por los siguientes estudiantes:
 
-** Belluscio Giovana
-** Fernández Nicolás
-** Paz Jazmin
+* Belluscio Giovana
+* Fernández Nicolás
+* Paz Jazmin
 
-** Quinto año de la Escuela Experimental con énfasis en Tics ProA La Falda
+* Quinto año de la Escuela Experimental con énfasis en Tics ProA La Falda
 
