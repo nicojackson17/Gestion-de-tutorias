@@ -63,3 +63,8 @@ p a {
     color: #5c9c78;
     font-weight: bold;
 }
+#mensaje {
+    color: red;
+    font-size: 12px;
+    margin-top: 12px;
+}
