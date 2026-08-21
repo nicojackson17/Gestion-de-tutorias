@@ -73,15 +73,17 @@ h1 {
 
 .title {
     text-align: center;
-    padding: 20px 0;
-    background-color: #e5f3eb;
-    color: #347c59;
+    padding: 60px 0;
+    width: 100%;
+    background-color: #6ca88b;
+    color: #000000;
     font-size: 14px;
+    border-radius: 10px;
 }
 
 .subtitulo {
     font-size: 17px;
-    color: #77857d;
+    color: #000000;
     margin-bottom: 70px;
     text-align: center;
 }
