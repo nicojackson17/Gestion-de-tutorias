@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7faf8;
+    background-color: #c7e4c3;
     color: #26332d;
     min-height: 100vh;
 }
@@ -17,7 +17,7 @@ body {
     top: 20px;
     bottom: 20px;
     width: 75px;
-    background-color: #a4f5c4;
+    background-color: #57bb7f;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #4b9b73;
+    color: #269b61;
     text-decoration: none;
     border-radius: 15px;
     font-size: 22px;
@@ -51,7 +51,7 @@ body {
 
 .sidebar-icon:hover {
     background-color: #e5f3eb;
-    color: #347c59;
+    color: #20774d;
     transform: scale(1.05);
 }
 
@@ -115,7 +115,7 @@ h1 {
     width: 155px;
     height: 155px;
     border-radius: 50%;
-    background-color: #a4f5c4;
+    background-color: #57bb7f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,9 +192,9 @@ h1 {
 
 .footer {
     margin-top: 60px;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
-    background-color: #5fc9ad;
+    background-color: #57bb7f;
     color: white;
     font-size: 13px;
 }
