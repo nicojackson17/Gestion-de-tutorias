@@ -71,21 +71,25 @@ h1 {
     margin-bottom: 10px;
 }
 
-.title {
+.encabezado {
+    background-color: #347c59;
+    border-radius: 15px;
+    padding: 30px 100px;
+    margin-bottom: 45px;
     text-align: center;
-    padding: 60px 0;
-    width: 100%;
-    background-color: #6ca88b;
-    color: #000000;
-    font-size: 14px;
-    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    margin: 0;
+    color: white;
+    font-size: 32px;
 }
 
 .subtitulo {
-    font-size: 17px;
-    color: #000000;
-    margin-bottom: 70px;
-    text-align: center;
+    margin: 10px 0 0;
+    color: white;
+    font-size: 16px;
 }
 
 .opciones {
@@ -186,10 +190,15 @@ h1 {
 
 }
 
-footer {
+.footer {
+    margin-top: 60px;
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
-    background-color: #e5f3eb;
-    color: #347c59;
-    font-size: 14px;
+    background-color: #5fc9ad;
+    color: white;
+    font-size: 13px;
+}
+
+.footer p {
+    margin: 0;
 }
