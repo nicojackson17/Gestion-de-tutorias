@@ -3,7 +3,7 @@
     <formularioRegistro @registrar-cuenta="registrarCuenta" />
 
     <p v-if="ultimoRegistro" class="confirmacion">
-      Cuenta creada para {{ ultimoRegistro.nombre }} {{ ultimoRegistro.apellido }}
+      Cuenta creada para {{ ultimoRegistro.nombre }}
       ({{ ultimoRegistro.rol }})
     </p>
   </main>
@@ -38,7 +38,7 @@ export default {
 <style>
 body {
   margin: 0;
-  background: rgb(178, 189, 71);
+  background: #CEEDB2;
   font-family: Arial, sans-serif;
 }
 

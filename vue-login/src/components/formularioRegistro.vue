@@ -31,13 +31,12 @@
           :type="mostrarContrasena ? 'text' : 'password'"
           placeholder="Mínimo 8 caracteres"
         />
-        <button
-          type="button"
-          class="boton-ojo"
+        <img
+          :src="mostrarContrasena ? '/icons/ojo-abierto.svg' : '/icons/ojo-cerrado.svg'"
+          class="icono-ojo"
+          alt="Mostrar u ocultar contraseña"
           @click="mostrarContrasena = !mostrarContrasena"
-        >
-          {{ mostrarContrasena ? 'Ocultar' : 'Mostrar' }}
-        </button>
+        />
       </div>
 
       <label>Confirmar contraseña</label>
@@ -47,13 +46,12 @@
           :type="mostrarConfirmarContrasena ? 'text' : 'password'"
           placeholder="Verificar la contraseña"
         />
-        <button
-          type="button"
-          class="boton-ojo"
+        <img
+          :src="mostrarConfirmarContrasena ? '/icons/ojo-abierto.svg' : '/icons/ojo-cerrado.svg'"
+          class="icono-ojo"
+          alt="Mostrar u ocultar contraseña"
           @click="mostrarConfirmarContrasena = !mostrarConfirmarContrasena"
-        >
-          {{ mostrarConfirmarContrasena ? 'Ocultar' : 'Mostrar' }}
-        </button>
+        />
       </div>
       <button type="submit">Registrarme</button>
 
@@ -67,13 +65,15 @@ export default {
   name: 'formularioRegistro',
   emits: ['registrar-cuenta'],
 
-  data() {
+    data() {
     return {
       nombre: '',
       email: '',
       rol: '',
       contrasena: '',
       confirmarContrasena: '',
+      mostrarContrasena: false,
+      mostrarConfirmarContrasena: false,
       error: ''
     }
   },
@@ -139,10 +139,31 @@ export default {
 <style scoped>
 .formulario {
   width: 900px;
-  background: #f3e3b2;
+  background: #e2f7d3;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.campo-contrasena {
+  position: relative;
+  display: flex;
+}
+
+.campo-contrasena input {
+  flex: 1;
+  padding-right: 45px;
+}
+
+.icono-ojo {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  user-select: none;
 }
 
 form {
@@ -154,14 +175,14 @@ form {
 /* Tamaño y color de las casillas (inputs y desplegable) */
 input,
 select {
-  width: 100%;
-  box-sizing: border-box;
+  width: 60%;
+  box-sizing: center-box;
   padding: 12px;
   font-size: 16px;
-  background: #ffffff;
-  color: #1f2937;
-  border: 2px solid #c9a35f;
-  border-radius: 8px;
+  background: #e2f7d3;
+  color: #0f131a;
+  border-radius: 30px;
+  border: 2px solid #d0e2c3;
   font-family: Arial, sans-serif;
 }
 
