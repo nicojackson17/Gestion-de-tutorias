@@ -6,13 +6,756 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Usuario</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
+    <aside class="sidebar">
+
+        <a href="index.html" class="sidebar-icon" title="Inicio">
+            <i class="fa-solid fa-house"></i>
+        </a>
+
+        <a href="biblioteca.html" class="sidebar-icon biblioteca-icon" title="Biblioteca">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <a href="Perfil.html" class="sidebar-icon perfil-icon" title="Perfil">
+            <i class="fa-solid fa-user"></i>
+        </a>
+
+    </aside>
+
     <main class="main-content">
         <div class="perfil-contenedor">
             <h1>
-                Información personal
+                Información Personal
             </h1>
+
+            <div class="perfil-superior">
+                <div class="foto-seccion">
+
+                    <label for="fotoUsuario" class="foto-perfil">
+
+                        <i class="fa-solid fa-user" id="iconoFoto"></i>
+
+                        <img id="imagenPerfil" src="" alt="Foto de perfil">
+
+                    </label>
+
+                    <input
+                        type="file"
+                        id="fotoUsuario"
+                        accept="image/*"
+                    >
+
+                    <p>
+                        Haz clic para agregar una foto
+                    </p>
+
+                </div>
+
+                <div class="datos-usuario">
+
+
+                    <!-- NOMBRE -->
+
+                    <div class="campo-perfil">
+
+                        <label for="nombreApellido">
+                            Nombre y Apellido
+                        </label>
+
+                        <div class="input-perfil">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="nombreApellido"
+                                placeholder="Ingrese su nombre y apellido"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="campo-perfil">
+
+                        <label for="correoElectronico">
+                            Correo electrónico
+                        </label>
+
+                        <div class="input-perfil">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="correoElectronico"
+                                placeholder="Ingrese su correo electrónico"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="campo-perfil">
+
+                        <label for="numeroTelefono">
+                            Número de teléfono
+                        </label>
+
+                        <div class="input-perfil">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="numeroTelefono"
+                                placeholder="Ingrese su número de teléfono"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="campo-perfil">
+
+                        <label for="cargo">
+                            Cargo
+                        </label>
+
+                        <div class="input-perfil">
+
+                            <i class="fa-solid fa-briefcase"></i>
+
+                            <select id="cargo">
+
+                                <option value="">
+                                    Seleccione un cargo
+                                </option>
+
+                                <option value="docente">
+                                    Docente
+                                </option>
+
+                                <option value="gestion">
+                                    Equipo de gestión
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="asignaciones">
+
+                <button
+                    type="button"
+                    class="boton-asignacion"
+                    id="botonMaterias"
+                >
+
+                    <i class="fa-solid fa-book"></i>
+
+                    <span>
+                        Materias asignadas
+                    </span>
+
+                    <small>
+                        Seleccionar materias
+                    </small>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="boton-asignacion"
+                    id="botonCursos"
+                >
+
+                    <i class="fa-solid fa-school"></i>
+
+                    <span>
+                        Cursos asignados
+                    </span>
+
+                    <small>
+                        Seleccionar cursos
+                    </small>
+
+                </button>
+
+            </div>
+
+            <div class="guardar-perfil">
+
+                <button
+                    type="button"
+                    class="boton-guardar-perfil"
+                    id="guardarCambios"
+                >
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Guardar cambios
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="modal-perfil" id="modalMaterias">
+
+        <div class="modal-contenido-perfil">
+
+            <button
+                type="button"
+                class="cerrar-modal"
+                id="cerrarMaterias"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h2>
+                Materias asignadas
+            </h2>
+
+            <p>
+                Seleccione las materias que tiene asignadas.
+            </p>
+
+            <div class="lista-opciones">
+
+                <label>
+                    <input type="checkbox" value="Matemática">
+                    Matemática
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Lengua">
+                    Lengua
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Historia">
+                    Historia
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Geografía">
+                    Geografía
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Biología">
+                    Biología
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Física">
+                    Física
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Química">
+                    Química
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Inglés">
+                    Inglés
+                </label>
+
+            </div>
+
+            <button
+                type="button"
+                class="boton-confirmar"
+                id="guardarMaterias"
+            >
+                Guardar materias
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="modal-perfil" id="modalCursos">
+
+        <div class="modal-contenido-perfil">
+
+            <button
+                type="button"
+                class="cerrar-modal"
+                id="cerrarCursos"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h2>
+                Cursos asignados
+            </h2>
+
+            <p>
+                Seleccione los cursos a los que enseña.
+            </p>
+
+            <div class="lista-opciones">
+
+                <label>
+                    <input type="checkbox" value="1° A">
+                    1° 
+                </label>
+
+                <label>
+                    <input type="checkbox" value="2° A">
+                    2° 
+                </label>
+
+                <label>
+                    <input type="checkbox" value="3° A">
+                    3° 
+                </label>
+
+                <label>
+                    <input type="checkbox" value="4° A">
+                    4° 
+                </label>
+
+            </div>
+
+            <button
+                type="button"
+                class="boton-confirmar"
+                id="guardarCursos"
+            >
+                Guardar cursos
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        /* =================================================
+           FOTO DE PERFIL
+           ================================================= */
+
+        const fotoUsuario = document.getElementById("fotoUsuario");
+        const imagenPerfil = document.getElementById("imagenPerfil");
+        const iconoFoto = document.getElementById("iconoFoto");
+
+        fotoUsuario.addEventListener("change", function () {
+
+            const archivo = this.files[0];
+
+            if (!archivo) {
+                return;
+            }
+
+            const lector = new FileReader();
+
+            lector.onload = function (evento) {
+
+                imagenPerfil.src = evento.target.result;
+
+                imagenPerfil.style.display = "block";
+
+                iconoFoto.style.display = "none";
+
+                localStorage.setItem(
+                    "fotoPerfil",
+                    evento.target.result
+                );
+
+            };
+
+            lector.readAsDataURL(archivo);
+
+        });
+
+
+        /* =================================================
+           MODAL DE MATERIAS
+           ================================================= */
+
+        const modalMaterias =
+            document.getElementById("modalMaterias");
+
+        const botonMaterias =
+            document.getElementById("botonMaterias");
+
+        const cerrarMaterias =
+            document.getElementById("cerrarMaterias");
+
+        botonMaterias.addEventListener("click", function () {
+
+            modalMaterias.style.display = "flex";
+
+        });
+
+        cerrarMaterias.addEventListener("click", function () {
+
+            modalMaterias.style.display = "none";
+
+        });
+
+
+        /* =================================================
+           MODAL DE CURSOS
+           ================================================= */
+
+        const modalCursos =
+            document.getElementById("modalCursos");
+
+        const botonCursos =
+            document.getElementById("botonCursos");
+
+        const cerrarCursos =
+            document.getElementById("cerrarCursos");
+
+        botonCursos.addEventListener("click", function () {
+
+            modalCursos.style.display = "flex";
+
+        });
+
+        cerrarCursos.addEventListener("click", function () {
+
+            modalCursos.style.display = "none";
+
+        });
+
+
+        /* =================================================
+           GUARDAR MATERIAS
+           ================================================= */
+
+        const guardarMaterias =
+            document.getElementById("guardarMaterias");
+
+        guardarMaterias.addEventListener("click", function () {
+
+            const seleccionadas =
+                document.querySelectorAll(
+                    "#modalMaterias input[type='checkbox']:checked"
+                );
+
+            const materias = [];
+
+            seleccionadas.forEach(function (materia) {
+
+                materias.push(materia.value);
+
+            });
+
+            localStorage.setItem(
+                "materiasAsignadas",
+                JSON.stringify(materias)
+            );
+
+            modalMaterias.style.display = "none";
+
+            actualizarTextoMaterias();
+
+        });
+
+
+        /* =================================================
+           GUARDAR CURSOS
+           ================================================= */
+
+        const guardarCursos =
+            document.getElementById("guardarCursos");
+
+        guardarCursos.addEventListener("click", function () {
+
+            const seleccionados =
+                document.querySelectorAll(
+                    "#modalCursos input[type='checkbox']:checked"
+                );
+
+            const cursos = [];
+
+            seleccionados.forEach(function (curso) {
+
+                cursos.push(curso.value);
+
+            });
+
+            localStorage.setItem(
+                "cursosAsignados",
+                JSON.stringify(cursos)
+            );
+
+            modalCursos.style.display = "none";
+
+            actualizarTextoCursos();
+
+        });
+
+
+        /* =================================================
+           MOSTRAR MATERIAS SELECCIONADAS
+           ================================================= */
+
+        function actualizarTextoMaterias() {
+
+            const boton =
+                document.getElementById("botonMaterias");
+
+            const materiasGuardadas =
+                JSON.parse(
+                    localStorage.getItem("materiasAsignadas")
+                ) || [];
+
+            const texto =
+                boton.querySelector("small");
+
+            if (materiasGuardadas.length > 0) {
+
+                texto.textContent =
+                    materiasGuardadas.join(", ");
+
+            } else {
+
+                texto.textContent =
+                    "Seleccionar materias";
+
+            }
+
+        }
+
+
+        /* =================================================
+           MOSTRAR CURSOS SELECCIONADOS
+           ================================================= */
+
+        function actualizarTextoCursos() {
+
+            const boton =
+                document.getElementById("botonCursos");
+
+            const cursosGuardados =
+                JSON.parse(
+                    localStorage.getItem("cursosAsignados")
+                ) || [];
+
+            const texto =
+                boton.querySelector("small");
+
+            if (cursosGuardados.length > 0) {
+
+                texto.textContent =
+                    cursosGuardados.join(", ");
+
+            } else {
+
+                texto.textContent =
+                    "Seleccionar cursos";
+
+            }
+
+        }
+
+
+        /* =================================================
+           GUARDAR CAMBIOS
+           ================================================= */
+
+        document
+            .getElementById("guardarCambios")
+            .addEventListener("click", function () {
+
+                const nombre =
+                    document.getElementById(
+                        "nombreApellido"
+                    ).value;
+
+                const correo =
+                    document.getElementById(
+                        "correoElectronico"
+                    ).value;
+
+                const telefono =
+                    document.getElementById(
+                        "numeroTelefono"
+                    ).value;
+
+                const cargo =
+                    document.getElementById(
+                        "cargo"
+                    ).value;
+
+
+                localStorage.setItem(
+                    "nombreApellido",
+                    nombre
+                );
+
+                localStorage.setItem(
+                    "correoElectronico",
+                    correo
+                );
+
+                localStorage.setItem(
+                    "numeroTelefono",
+                    telefono
+                );
+
+                localStorage.setItem(
+                    "cargo",
+                    cargo
+                );
+
+
+                alert("¡Cambios guardados correctamente!");
+
+            });
+
+
+        /* =================================================
+           CARGAR DATOS AL ABRIR LA PÁGINA
+           ================================================= */
+
+        window.addEventListener("load", function () {
+
+            document.getElementById(
+                "nombreApellido"
+            ).value =
+                localStorage.getItem(
+                    "nombreApellido"
+                ) || "";
+
+
+            document.getElementById(
+                "correoElectronico"
+            ).value =
+                localStorage.getItem(
+                    "correoElectronico"
+                ) || "";
+
+
+            document.getElementById(
+                "numeroTelefono"
+            ).value =
+                localStorage.getItem(
+                    "numeroTelefono"
+                ) || "";
+
+
+            document.getElementById(
+                "cargo"
+            ).value =
+                localStorage.getItem(
+                    "cargo"
+                ) || "";
+
+
+            /* FOTO */
+
+            const fotoGuardada =
+                localStorage.getItem("fotoPerfil");
+
+            if (fotoGuardada) {
+
+                imagenPerfil.src = fotoGuardada;
+
+                imagenPerfil.style.display = "block";
+
+                iconoFoto.style.display = "none";
+
+            }
+
+
+            /* MATERIAS */
+
+            const materiasGuardadas =
+                JSON.parse(
+                    localStorage.getItem(
+                        "materiasAsignadas"
+                    )
+                ) || [];
+
+            materiasGuardadas.forEach(function (materia) {
+
+                const checkbox =
+                    document.querySelector(
+                        "#modalMaterias input[value='" +
+                        materia +
+                        "']"
+                    );
+
+                if (checkbox) {
+                    checkbox.checked = true;
+                }
+
+            });
+
+
+            /* CURSOS */
+
+            const cursosGuardados =
+                JSON.parse(
+                    localStorage.getItem(
+                        "cursosAsignados"
+                    )
+                ) || [];
+
+            cursosGuardados.forEach(function (curso) {
+
+                const checkbox =
+                    document.querySelector(
+                        "#modalCursos input[value='" +
+                        curso +
+                        "']"
+                    );
+
+                if (checkbox) {
+                    checkbox.checked = true;
+                }
+
+            });
+
+
+            actualizarTextoMaterias();
+            actualizarTextoCursos();
+
+        });
+
+
+        /* =================================================
+           CERRAR MODALES AL HACER CLIC AFUERA
+           ================================================= */
+
+        window.addEventListener("click", function (evento) {
+
+            if (evento.target === modalMaterias) {
+
+                modalMaterias.style.display = "none";
+
+            }
+
+            if (evento.target === modalCursos) {
+
+                modalCursos.style.display = "none";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+```
