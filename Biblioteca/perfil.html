@@ -13,11 +13,11 @@
 <body>
     <aside class="sidebar">
 
-        <a href="index.html" class="sidebar-icon" title="Inicio">
+        <a href="inicio.html" class="sidebar-icon" title="Inicio">
             <i class="fa-solid fa-house"></i>
         </a>
 
-        <a href="biblioteca.html" class="sidebar-icon biblioteca-icon" title="Biblioteca">
+        <a href="index.html" class="sidebar-icon biblioteca-icon" title="Biblioteca">
             <i class="fa-solid fa-bars"></i>
         </a>
 
@@ -54,13 +54,18 @@
                         Haz clic para agregar una foto
                     </p>
 
+                    <button
+                        type="button"
+                        class="boton-quitar-foto"
+                        id="quitarFoto"
+                    >
+                        <i class="fa-solid fa-trash"></i>
+                            Quitar foto
+                    </button>
+
                 </div>
 
                 <div class="datos-usuario">
-
-
-                    <!-- NOMBRE -->
-
                     <div class="campo-perfil">
 
                         <label for="nombreApellido">
@@ -276,14 +281,6 @@
 
             </div>
 
-            <button
-                type="button"
-                class="boton-confirmar"
-                id="guardarMaterias"
-            >
-                Guardar materias
-            </button>
-
         </div>
 
     </div>
@@ -330,15 +327,7 @@
                     4° 
                 </label>
 
-            </div>
-
-            <button
-                type="button"
-                class="boton-confirmar"
-                id="guardarCursos"
-            >
-                Guardar cursos
-            </button>
+                <div class="guardar-perfil">
 
         </div>
 
@@ -353,6 +342,24 @@
         const fotoUsuario = document.getElementById("fotoUsuario");
         const imagenPerfil = document.getElementById("imagenPerfil");
         const iconoFoto = document.getElementById("iconoFoto");
+
+        const quitarFoto = document.getElementById("quitarFoto");
+
+quitarFoto.addEventListener("click", function () {
+
+    // Eliminar la foto guardada
+    localStorage.removeItem("fotoPerfil");
+
+    // Vaciar la imagen
+    imagenPerfil.src = "";
+
+    // Ocultar la imagen
+    imagenPerfil.style.display = "none";
+
+    // Volver a mostrar la personita gris
+    iconoFoto.style.display = "block";
+
+});
 
         fotoUsuario.addEventListener("change", function () {
 
@@ -621,116 +628,6 @@
                 alert("¡Cambios guardados correctamente!");
 
             });
-
-
-        /* =================================================
-           CARGAR DATOS AL ABRIR LA PÁGINA
-           ================================================= */
-
-        window.addEventListener("load", function () {
-
-            document.getElementById(
-                "nombreApellido"
-            ).value =
-                localStorage.getItem(
-                    "nombreApellido"
-                ) || "";
-
-
-            document.getElementById(
-                "correoElectronico"
-            ).value =
-                localStorage.getItem(
-                    "correoElectronico"
-                ) || "";
-
-
-            document.getElementById(
-                "numeroTelefono"
-            ).value =
-                localStorage.getItem(
-                    "numeroTelefono"
-                ) || "";
-
-
-            document.getElementById(
-                "cargo"
-            ).value =
-                localStorage.getItem(
-                    "cargo"
-                ) || "";
-
-
-            /* FOTO */
-
-            const fotoGuardada =
-                localStorage.getItem("fotoPerfil");
-
-            if (fotoGuardada) {
-
-                imagenPerfil.src = fotoGuardada;
-
-                imagenPerfil.style.display = "block";
-
-                iconoFoto.style.display = "none";
-
-            }
-
-
-            /* MATERIAS */
-
-            const materiasGuardadas =
-                JSON.parse(
-                    localStorage.getItem(
-                        "materiasAsignadas"
-                    )
-                ) || [];
-
-            materiasGuardadas.forEach(function (materia) {
-
-                const checkbox =
-                    document.querySelector(
-                        "#modalMaterias input[value='" +
-                        materia +
-                        "']"
-                    );
-
-                if (checkbox) {
-                    checkbox.checked = true;
-                }
-
-            });
-
-
-            /* CURSOS */
-
-            const cursosGuardados =
-                JSON.parse(
-                    localStorage.getItem(
-                        "cursosAsignados"
-                    )
-                ) || [];
-
-            cursosGuardados.forEach(function (curso) {
-
-                const checkbox =
-                    document.querySelector(
-                        "#modalCursos input[value='" +
-                        curso +
-                        "']"
-                    );
-
-                if (checkbox) {
-                    checkbox.checked = true;
-                }
-
-            });
-
-
-            actualizarTextoMaterias();
-            actualizarTextoCursos();
-
-        });
 
 
         /* =================================================

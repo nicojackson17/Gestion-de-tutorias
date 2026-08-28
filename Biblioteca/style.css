@@ -1563,6 +1563,8 @@ h1 {
 
 
 .boton-guardar-perfil {
+    text-align: center;
+
     border: none;
 
     border-radius: 10px;
@@ -1604,6 +1606,8 @@ h1 {
    ===================================================== */
 
 .modal-perfil {
+    text-align: center;
+
     position: fixed;
 
     inset: 0;
@@ -1621,6 +1625,8 @@ h1 {
 
 
 .modal-contenido-perfil {
+    text-align: center;
+
     position: relative;
 
     width: 500px;
@@ -1652,6 +1658,8 @@ h1 {
 
 
 .modal-contenido-perfil > p {
+    text-align: center;
+
     color: #708078;
 
     font-size: 14px;
@@ -1761,6 +1769,8 @@ h1 {
    ===================================================== */
 
 .boton-confirmar {
+    text-align: center;
+    
     width: 100%;
 
     border: none;
@@ -1855,3 +1865,29 @@ h1 {
     }
 
 }
+
+/* =====================================================
+   QUITAR FOTO DE PERFIL
+   ===================================================== */
+
+.boton-quitar-foto {
+    margin-top: 10px;
+
+    border: none;
+    background-color: transparent;
+
+    color: #708078;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.boton-quitar-foto:hover {
+    color: #347c59;
+    transform: translateY(-1px);
+}
+
