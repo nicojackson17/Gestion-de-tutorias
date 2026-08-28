@@ -2,39 +2,74 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Registro de Asistencia</title>
+
     <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 
 <body>
+
+
+    <!-- BARRA LATERAL -->
+
     <aside class="sidebar">
 
-        <a href="inicio.html" class="sidebar-icon" title="Inicio">
+        <a href="inicio.html"
+           class="sidebar-icon"
+           title="Inicio">
+
             <i class="fa-solid fa-house"></i>
+
         </a>
 
-        <a href="index.html" class="sidebar-icon biblioteca-icon" title="Biblioteca">
+
+        <a href="index.html"
+           class="sidebar-icon biblioteca-icon"
+           title="Biblioteca">
+
             <i class="fa-solid fa-bars"></i>
+
         </a>
 
-        <a href="perfil.html" class="sidebar-icon perfil-icon" title="Perfil">
+
+        <a href="perfil.html"
+           class="sidebar-icon perfil-icon"
+           title="Perfil">
+
             <i class="fa-solid fa-user"></i>
+
         </a>
 
     </aside>
 
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+
     <main class="main-content">
+
 
         <div class="asistencia-contenedor">
 
+
+            <!-- TÍTULO -->
+
             <h1 class="asistencia-titulo">
+
                 Registro de Asistencia
+
             </h1>
+
 
 
             <!-- ESTUDIANTE - FECHA - HORARIO -->
@@ -47,29 +82,48 @@
                 <div class="campo-asistencia">
 
                     <label for="estudiante">
+
                         Estudiante
+
                     </label>
+
 
                     <select id="estudiante">
 
                         <option value="">
+
                             Seleccionar estudiante
+
                         </option>
 
                         <option>Mateo González</option>
+
                         <option>Valentina Rodríguez</option>
+
                         <option>Santiago Fernández</option>
+
                         <option>Camila Martínez</option>
+
                         <option>Tomás López</option>
+
                         <option>Martina Sánchez</option>
+
                         <option>Lucas Romero</option>
+
                         <option>Agustina Torres</option>
+
                         <option>Benjamín Herrera</option>
+
                         <option>Julieta Castro</option>
+
                         <option>Franco Medina</option>
+
                         <option>Sofía Navarro</option>
+
                         <option>Juan Cruz Molina</option>
+
                         <option>Emilia Vargas</option>
+
                         <option>Nicolás Pereyra</option>
 
                     </select>
@@ -77,13 +131,17 @@
                 </div>
 
 
+
                 <!-- FECHA -->
 
                 <div class="campo-asistencia">
 
                     <label for="fecha">
+
                         Fecha
+
                     </label>
+
 
                     <input
                         type="date"
@@ -93,27 +151,40 @@
                 </div>
 
 
+
                 <!-- HORARIO -->
 
                 <div class="campo-asistencia">
 
                     <label for="horario">
+
                         Horario
+
                     </label>
+
 
                     <select id="horario">
 
                         <option value="">
+
                             Seleccionar horario
+
                         </option>
 
                         <option>7:30 - 8:00</option>
+
                         <option>14:30 - 15:00</option>
+
                         <option>15:00 - 15:30</option>
+
                         <option>15:30 - 16:00</option>
+
                         <option>16:00 - 16:30</option>
+
                         <option>16:30 - 17:00</option>
+
                         <option>17:00 - 17:30</option>
+
                         <option>17:30 - 18:00</option>
 
                     </select>
@@ -123,9 +194,10 @@
             </div>
 
 
-            <!-- ASIGNATURA - ESTADO -->
 
-            <div class="asistencia-fila-dos">
+            <!-- ASIGNATURA - ESTADO - CONVOCADOS -->
+
+            <div class="asistencia-fila-tres">
 
 
                 <!-- ASIGNATURA -->
@@ -133,22 +205,34 @@
                 <div class="campo-asistencia">
 
                     <label for="asignatura">
+
                         Asignatura
+
                     </label>
+
 
                     <select id="asignatura">
 
                         <option value="">
+
                             Seleccionar asignatura
+
                         </option>
 
                         <option>Inglés</option>
+
                         <option>Matemática</option>
+
                         <option>Lengua</option>
+
                         <option>Historia</option>
+
                         <option>Geografía</option>
+
                         <option>Biología</option>
+
                         <option>Física</option>
+
                         <option>Química</option>
 
                     </select>
@@ -156,29 +240,60 @@
                 </div>
 
 
+
                 <!-- ESTADO -->
 
                 <div class="campo-asistencia">
 
                     <label for="estado">
+
                         Estado
+
                     </label>
+
 
                     <select id="estado">
 
                         <option value="">
+
                             Seleccionar estado
+
                         </option>
 
                         <option>Presente</option>
+
                         <option>Ausente</option>
+
                         <option>Llegó tarde</option>
 
                     </select>
 
                 </div>
 
+
+
+                <!-- ESTUDIANTES CONVOCADOS -->
+
+                <div class="campo-asistencia">
+
+                    <label for="convocados">
+
+                        Estudiantes convocados
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="convocados"
+                        min="1"
+                        placeholder="Cantidad"
+                    >
+
+                </div>
+
             </div>
+
 
 
             <!-- OBSERVACIONES Y COMPROMISOS -->
@@ -191,8 +306,11 @@
                 <div class="campo-asistencia">
 
                     <label for="observaciones">
+
                         Observaciones
+
                     </label>
+
 
                     <textarea
                         id="observaciones"
@@ -202,13 +320,17 @@
                 </div>
 
 
+
                 <!-- COMPROMISOS FUTUROS -->
 
                 <div class="campo-asistencia compromisos">
 
                     <label for="compromisos">
+
                         Compromisos Futuros
+
                     </label>
+
 
                     <textarea
                         id="compromisos"
@@ -220,13 +342,17 @@
             </div>
 
 
+
             <!-- CONTENIDOS A TRABAJAR -->
 
             <div class="campo-asistencia contenido-asistencia">
 
                 <label for="contenidos">
+
                     Contenidos a trabajar
+
                 </label>
+
 
                 <textarea
                     id="contenidos"
@@ -234,6 +360,7 @@
                 ></textarea>
 
             </div>
+
 
 
             <!-- ACTIVIDADES Y GUARDAR -->
@@ -246,8 +373,11 @@
                 <div class="campo-asistencia actividades">
 
                     <label for="actividades">
+
                         Actividades realizadas
+
                     </label>
+
 
                     <textarea
                         id="actividades"
@@ -257,22 +387,35 @@
                 </div>
 
 
+
                 <!-- GUARDAR -->
 
                 <button
                     type="button"
+                    id="guardar-asistencia"
                     class="boton-guardar-asistencia"
                 >
+
                     <i class="fa-solid fa-floppy-disk"></i>
+
                     Guardar asistencia
+
                 </button>
 
             </div>
+
 
         </div>
 
     </main>
 
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="registro.js"></script>
+
 </body>
 
 </html>
+```
