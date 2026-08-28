@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Asistencia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+
+<body>
+    <aside class="sidebar">
+
+        <a href="inicio.html" class="sidebar-icon" title="Inicio">
+            <i class="fa-solid fa-house"></i>
+        </a>
+
+        <a href="index.html" class="sidebar-icon biblioteca-icon" title="Biblioteca">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <a href="perfil.html" class="sidebar-icon perfil-icon" title="Perfil">
+            <i class="fa-solid fa-user"></i>
+        </a>
+
+    </aside>
+
+    <main class="main-content">
+
+        <div class="asistencia-contenedor">
+
+            <h1 class="asistencia-titulo">
+                Registro de Asistencia
+            </h1>
+
+
+            <!-- ESTUDIANTE - FECHA - HORARIO -->
+
+            <div class="asistencia-fila-tres">
+
+
+                <!-- ESTUDIANTE -->
+
+                <div class="campo-asistencia">
+
+                    <label for="estudiante">
+                        Estudiante
+                    </label>
+
+                    <select id="estudiante">
+
+                        <option value="">
+                            Seleccionar estudiante
+                        </option>
+
+                        <option>Mateo González</option>
+                        <option>Valentina Rodríguez</option>
+                        <option>Santiago Fernández</option>
+                        <option>Camila Martínez</option>
+                        <option>Tomás López</option>
+                        <option>Martina Sánchez</option>
+                        <option>Lucas Romero</option>
+                        <option>Agustina Torres</option>
+                        <option>Benjamín Herrera</option>
+                        <option>Julieta Castro</option>
+                        <option>Franco Medina</option>
+                        <option>Sofía Navarro</option>
+                        <option>Juan Cruz Molina</option>
+                        <option>Emilia Vargas</option>
+                        <option>Nicolás Pereyra</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- FECHA -->
+
+                <div class="campo-asistencia">
+
+                    <label for="fecha">
+                        Fecha
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fecha"
+                    >
+
+                </div>
+
+
+                <!-- HORARIO -->
+
+                <div class="campo-asistencia">
+
+                    <label for="horario">
+                        Horario
+                    </label>
+
+                    <select id="horario">
+
+                        <option value="">
+                            Seleccionar horario
+                        </option>
+
+                        <option>7:30 - 8:00</option>
+                        <option>14:30 - 15:00</option>
+                        <option>15:00 - 15:30</option>
+                        <option>15:30 - 16:00</option>
+                        <option>16:00 - 16:30</option>
+                        <option>16:30 - 17:00</option>
+                        <option>17:00 - 17:30</option>
+                        <option>17:30 - 18:00</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- ASIGNATURA - ESTADO -->
+
+            <div class="asistencia-fila-dos">
+
+
+                <!-- ASIGNATURA -->
+
+                <div class="campo-asistencia">
+
+                    <label for="asignatura">
+                        Asignatura
+                    </label>
+
+                    <select id="asignatura">
+
+                        <option value="">
+                            Seleccionar asignatura
+                        </option>
+
+                        <option>Inglés</option>
+                        <option>Matemática</option>
+                        <option>Lengua</option>
+                        <option>Historia</option>
+                        <option>Geografía</option>
+                        <option>Biología</option>
+                        <option>Física</option>
+                        <option>Química</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ESTADO -->
+
+                <div class="campo-asistencia">
+
+                    <label for="estado">
+                        Estado
+                    </label>
+
+                    <select id="estado">
+
+                        <option value="">
+                            Seleccionar estado
+                        </option>
+
+                        <option>Presente</option>
+                        <option>Ausente</option>
+                        <option>Llegó tarde</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- OBSERVACIONES Y COMPROMISOS -->
+
+            <div class="asistencia-fila-textareas">
+
+
+                <!-- OBSERVACIONES -->
+
+                <div class="campo-asistencia">
+
+                    <label for="observaciones">
+                        Observaciones
+                    </label>
+
+                    <textarea
+                        id="observaciones"
+                        placeholder="Escriba las observaciones de la tutoría..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- COMPROMISOS FUTUROS -->
+
+                <div class="campo-asistencia compromisos">
+
+                    <label for="compromisos">
+                        Compromisos Futuros
+                    </label>
+
+                    <textarea
+                        id="compromisos"
+                        placeholder="Escriba los compromisos futuros..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTENIDOS A TRABAJAR -->
+
+            <div class="campo-asistencia contenido-asistencia">
+
+                <label for="contenidos">
+                    Contenidos a trabajar
+                </label>
+
+                <textarea
+                    id="contenidos"
+                    placeholder="Escriba los contenidos trabajados durante la tutoría..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- ACTIVIDADES Y GUARDAR -->
+
+            <div class="asistencia-fila-final">
+
+
+                <!-- ACTIVIDADES REALIZADAS -->
+
+                <div class="campo-asistencia actividades">
+
+                    <label for="actividades">
+                        Actividades realizadas
+                    </label>
+
+                    <textarea
+                        id="actividades"
+                        placeholder="Escriba las actividades realizadas..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- GUARDAR -->
+
+                <button
+                    type="button"
+                    class="boton-guardar-asistencia"
+                >
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Guardar asistencia
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
