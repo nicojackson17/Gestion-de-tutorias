@@ -1,11 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <!-- BARRA LATERAL -->
+    <aside class="sidebar">
+
+        <a href="index.html"
+           class="sidebar-icon"
+           title="Inicio">
+            <i class="fa-solid fa-house"></i>
+        </a>
+
+        <a href="biblioteca.html"
+           class="sidebar-icon biblioteca-icon"
+           title="Biblioteca">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <a href="perfil.html"
+           class="sidebar-icon perfil-icon"
+           title="Perfil">
+            <i class="fa-solid fa-user"></i>
+        </a>
+
+    </aside>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+        <div class="contenedor-estudiantes">
+
+            <!-- ENCABEZADO -->
+            <header class="encabezado">
+                <h1>Estudiantes</h1>
+
+                <p>
+                    Busque un estudiante o seleccione un curso.
+                </p>
+            </header>
+
+
+            <!-- BUSCADOR -->
+            <section class="seccion-buscador">
+
+                <div class="buscador-contenedor">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="buscadorEstudiantes"
+                        placeholder="Buscar estudiante..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- CURSOS -->
+            <section class="seccion-cursos">
+
+                <h2>Cursos</h2>
+                <div class="cursos">
+
+                    <a href="primero.html" class="boton-curso">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>1°</span>
+                        <small>Primer año</small>
+                    </a>
+
+                    <a href="segundo.html" class="boton-curso">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>2°</span>
+                        <small>Segundo año</small>
+                    </a>
+
+                    <a href="tercero.html" class="boton-curso">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>3°</span>
+                        <small>Tercer año</small>
+                    </a>
+
+                    <a href="cuarto.html" class="boton-curso">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>4°</span>
+                        <small>Cuarto año</small>
+                    </a>
+
+                    <a href="quinto.html" class="boton-curso">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>5°</span>
+                        <small>Quinto año</small>
+                    </a>
+
+                    <a href="sexto.html" class="boton-curso">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>6°</span>
+                        <small>Sexto año</small>
+                    </a>
+
+                </div>
+                
+                    
+                    
+
+                </div>
+
+            </section>
+
+
+            
+
+            </section>
+
+        </div>
+
+    </main>
+
+        
+    <script src="script.js"></script>
 </body>
-</html>
