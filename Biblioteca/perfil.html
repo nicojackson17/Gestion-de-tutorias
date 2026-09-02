@@ -4,13 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Perfil de Usuario</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 </head>
 
 <body>
+
+    <!-- =================================================
+         BARRA LATERAL
+         ================================================= -->
+
     <aside class="sidebar">
 
         <a href="inicio.html" class="sidebar-icon" title="Inicio">
@@ -27,22 +37,46 @@
 
     </aside>
 
+
+    <!-- =================================================
+         CONTENIDO PRINCIPAL
+         ================================================= -->
+
     <main class="main-content">
+
         <div class="perfil-contenedor">
+
             <h1>
                 Información Personal
             </h1>
 
+
+            <!-- =================================================
+                 INFORMACIÓN DEL USUARIO
+                 ================================================= -->
+
             <div class="perfil-superior">
+
+
+                <!-- FOTO DE PERFIL -->
+
                 <div class="foto-seccion">
 
                     <label for="fotoUsuario" class="foto-perfil">
 
-                        <i class="fa-solid fa-user" id="iconoFoto"></i>
+                        <i
+                            class="fa-solid fa-user"
+                            id="iconoFoto"
+                        ></i>
 
-                        <img id="imagenPerfil" src="" alt="Foto de perfil">
+                        <img
+                            id="imagenPerfil"
+                            src=""
+                            alt="Foto de perfil"
+                        >
 
                     </label>
+
 
                     <input
                         type="file"
@@ -50,22 +84,34 @@
                         accept="image/*"
                     >
 
+
                     <p>
                         Haz clic para agregar una foto
                     </p>
+
 
                     <button
                         type="button"
                         class="boton-quitar-foto"
                         id="quitarFoto"
                     >
+
                         <i class="fa-solid fa-trash"></i>
-                            Quitar foto
+
+                        Quitar foto
+
                     </button>
 
                 </div>
 
+
+                <!-- DATOS DEL USUARIO -->
+
                 <div class="datos-usuario">
+
+
+                    <!-- NOMBRE -->
+
                     <div class="campo-perfil">
 
                         <label for="nombreApellido">
@@ -85,6 +131,9 @@
                         </div>
 
                     </div>
+
+
+                    <!-- CORREO -->
 
                     <div class="campo-perfil">
 
@@ -106,6 +155,9 @@
 
                     </div>
 
+
+                    <!-- TELÉFONO -->
+
                     <div class="campo-perfil">
 
                         <label for="numeroTelefono">
@@ -125,6 +177,9 @@
                         </div>
 
                     </div>
+
+
+                    <!-- CARGO -->
 
                     <div class="campo-perfil">
 
@@ -160,7 +215,15 @@
 
             </div>
 
+
+            <!-- =================================================
+                 ASIGNACIONES
+                 ================================================= -->
+
             <div class="asignaciones">
+
+
+                <!-- MATERIAS -->
 
                 <button
                     type="button"
@@ -179,6 +242,9 @@
                     </small>
 
                 </button>
+
+
+                <!-- CURSOS -->
 
                 <button
                     type="button"
@@ -200,6 +266,11 @@
 
             </div>
 
+
+            <!-- =================================================
+                 GUARDAR PERFIL COMPLETO
+                 ================================================= -->
+
             <div class="guardar-perfil">
 
                 <button
@@ -207,8 +278,11 @@
                     class="boton-guardar-perfil"
                     id="guardarCambios"
                 >
+
                     <i class="fa-solid fa-floppy-disk"></i>
+
                     Guardar cambios
+
                 </button>
 
             </div>
@@ -217,67 +291,160 @@
 
     </main>
 
-    <div class="modal-perfil" id="modalMaterias">
+
+    <!-- =================================================
+         MODAL DE MATERIAS
+         ================================================= -->
+
+    <div
+        class="modal-perfil"
+        id="modalMaterias"
+    >
 
         <div class="modal-contenido-perfil">
+
+
+            <!-- CERRAR -->
 
             <button
                 type="button"
                 class="cerrar-modal"
                 id="cerrarMaterias"
             >
+
                 <i class="fa-solid fa-xmark"></i>
+
             </button>
+
 
             <h2>
                 Materias asignadas
             </h2>
 
+
             <p>
                 Seleccione las materias que tiene asignadas.
             </p>
 
+
+            <!-- LISTA DE MATERIAS -->
+
             <div class="lista-opciones">
 
+
                 <label>
-                    <input type="checkbox" value="Matemática">
+
+                    <input
+                        type="checkbox"
+                        value="Matemática"
+                    >
+
                     Matemática
+
                 </label>
 
+
                 <label>
-                    <input type="checkbox" value="Lengua">
+
+                    <input
+                        type="checkbox"
+                        value="Lengua"
+                    >
+
                     Lengua
+
                 </label>
 
+
                 <label>
-                    <input type="checkbox" value="Historia">
+
+                    <input
+                        type="checkbox"
+                        value="Historia"
+                    >
+
                     Historia
+
                 </label>
 
+
                 <label>
-                    <input type="checkbox" value="Geografía">
+
+                    <input
+                        type="checkbox"
+                        value="Geografía"
+                    >
+
                     Geografía
+
                 </label>
 
+
                 <label>
-                    <input type="checkbox" value="Biología">
+
+                    <input
+                        type="checkbox"
+                        value="Biología"
+                    >
+
                     Biología
+
                 </label>
 
+
                 <label>
-                    <input type="checkbox" value="Física">
+
+                    <input
+                        type="checkbox"
+                        value="Física"
+                    >
+
                     Física
+
                 </label>
 
+
                 <label>
-                    <input type="checkbox" value="Química">
+
+                    <input
+                        type="checkbox"
+                        value="Química"
+                    >
+
                     Química
+
                 </label>
 
+
                 <label>
-                    <input type="checkbox" value="Inglés">
+
+                    <input
+                        type="checkbox"
+                        value="Inglés"
+                    >
+
                     Inglés
+
                 </label>
+
+            </div>
+
+
+            <!-- GUARDAR MATERIAS -->
+
+            <div class="guardar-perfil">
+
+                <button
+                    type="button"
+                    class="boton-guardar-perfil"
+                    id="guardarMaterias"
+                >
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Guardar cambios
+
+                </button>
 
             </div>
 
@@ -285,374 +452,126 @@
 
     </div>
 
-    <div class="modal-perfil" id="modalCursos">
+
+    <!-- =================================================
+         MODAL DE CURSOS
+         ================================================= -->
+
+    <div
+        class="modal-perfil"
+        id="modalCursos"
+    >
 
         <div class="modal-contenido-perfil">
+
+
+            <!-- CERRAR -->
 
             <button
                 type="button"
                 class="cerrar-modal"
                 id="cerrarCursos"
             >
+
                 <i class="fa-solid fa-xmark"></i>
+
             </button>
+
 
             <h2>
                 Cursos asignados
             </h2>
 
+
             <p>
                 Seleccione los cursos a los que enseña.
             </p>
 
+
+            <!-- LISTA DE CURSOS -->
+
             <div class="lista-opciones">
 
-                <label>
-                    <input type="checkbox" value="1° A">
-                    1° 
-                </label>
 
                 <label>
-                    <input type="checkbox" value="2° A">
-                    2° 
+
+                    <input
+                        type="checkbox"
+                        value="1° A"
+                    >
+
+                    1°
+
                 </label>
+
 
                 <label>
-                    <input type="checkbox" value="3° A">
-                    3° 
+
+                    <input
+                        type="checkbox"
+                        value="2° A"
+                    >
+
+                    2°
+
                 </label>
+
 
                 <label>
-                    <input type="checkbox" value="4° A">
-                    4° 
+
+                    <input
+                        type="checkbox"
+                        value="3° A"
+                    >
+
+                    3°
+
                 </label>
 
-                <div class="guardar-perfil">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        value="4° A"
+                    >
+
+                    4°
+
+                </label>
+
+            </div>
+
+
+            <!-- GUARDAR CURSOS -->
+
+            <div class="guardar-perfil">
+
+                <button
+                    type="button"
+                    class="boton-guardar-perfil"
+                    id="guardarCursos"
+                >
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Guardar cambios
+
+                </button>
+
+            </div>
 
         </div>
 
     </div>
 
-    <script>
 
-        /* =================================================
-           FOTO DE PERFIL
-           ================================================= */
+    <!-- =================================================
+         JAVASCRIPT
+         ================================================= -->
 
-        const fotoUsuario = document.getElementById("fotoUsuario");
-        const imagenPerfil = document.getElementById("imagenPerfil");
-        const iconoFoto = document.getElementById("iconoFoto");
-
-        const quitarFoto = document.getElementById("quitarFoto");
-
-quitarFoto.addEventListener("click", function () {
-
-    // Eliminar la foto guardada
-    localStorage.removeItem("fotoPerfil");
-
-    // Vaciar la imagen
-    imagenPerfil.src = "";
-
-    // Ocultar la imagen
-    imagenPerfil.style.display = "none";
-
-    // Volver a mostrar la personita gris
-    iconoFoto.style.display = "block";
-
-});
-
-        fotoUsuario.addEventListener("change", function () {
-
-            const archivo = this.files[0];
-
-            if (!archivo) {
-                return;
-            }
-
-            const lector = new FileReader();
-
-            lector.onload = function (evento) {
-
-                imagenPerfil.src = evento.target.result;
-
-                imagenPerfil.style.display = "block";
-
-                iconoFoto.style.display = "none";
-
-                localStorage.setItem(
-                    "fotoPerfil",
-                    evento.target.result
-                );
-
-            };
-
-            lector.readAsDataURL(archivo);
-
-        });
-
-
-        /* =================================================
-           MODAL DE MATERIAS
-           ================================================= */
-
-        const modalMaterias =
-            document.getElementById("modalMaterias");
-
-        const botonMaterias =
-            document.getElementById("botonMaterias");
-
-        const cerrarMaterias =
-            document.getElementById("cerrarMaterias");
-
-        botonMaterias.addEventListener("click", function () {
-
-            modalMaterias.style.display = "flex";
-
-        });
-
-        cerrarMaterias.addEventListener("click", function () {
-
-            modalMaterias.style.display = "none";
-
-        });
-
-
-        /* =================================================
-           MODAL DE CURSOS
-           ================================================= */
-
-        const modalCursos =
-            document.getElementById("modalCursos");
-
-        const botonCursos =
-            document.getElementById("botonCursos");
-
-        const cerrarCursos =
-            document.getElementById("cerrarCursos");
-
-        botonCursos.addEventListener("click", function () {
-
-            modalCursos.style.display = "flex";
-
-        });
-
-        cerrarCursos.addEventListener("click", function () {
-
-            modalCursos.style.display = "none";
-
-        });
-
-
-        /* =================================================
-           GUARDAR MATERIAS
-           ================================================= */
-
-        const guardarMaterias =
-            document.getElementById("guardarMaterias");
-
-        guardarMaterias.addEventListener("click", function () {
-
-            const seleccionadas =
-                document.querySelectorAll(
-                    "#modalMaterias input[type='checkbox']:checked"
-                );
-
-            const materias = [];
-
-            seleccionadas.forEach(function (materia) {
-
-                materias.push(materia.value);
-
-            });
-
-            localStorage.setItem(
-                "materiasAsignadas",
-                JSON.stringify(materias)
-            );
-
-            modalMaterias.style.display = "none";
-
-            actualizarTextoMaterias();
-
-        });
-
-
-        /* =================================================
-           GUARDAR CURSOS
-           ================================================= */
-
-        const guardarCursos =
-            document.getElementById("guardarCursos");
-
-        guardarCursos.addEventListener("click", function () {
-
-            const seleccionados =
-                document.querySelectorAll(
-                    "#modalCursos input[type='checkbox']:checked"
-                );
-
-            const cursos = [];
-
-            seleccionados.forEach(function (curso) {
-
-                cursos.push(curso.value);
-
-            });
-
-            localStorage.setItem(
-                "cursosAsignados",
-                JSON.stringify(cursos)
-            );
-
-            modalCursos.style.display = "none";
-
-            actualizarTextoCursos();
-
-        });
-
-
-        /* =================================================
-           MOSTRAR MATERIAS SELECCIONADAS
-           ================================================= */
-
-        function actualizarTextoMaterias() {
-
-            const boton =
-                document.getElementById("botonMaterias");
-
-            const materiasGuardadas =
-                JSON.parse(
-                    localStorage.getItem("materiasAsignadas")
-                ) || [];
-
-            const texto =
-                boton.querySelector("small");
-
-            if (materiasGuardadas.length > 0) {
-
-                texto.textContent =
-                    materiasGuardadas.join(", ");
-
-            } else {
-
-                texto.textContent =
-                    "Seleccionar materias";
-
-            }
-
-        }
-
-
-        /* =================================================
-           MOSTRAR CURSOS SELECCIONADOS
-           ================================================= */
-
-        function actualizarTextoCursos() {
-
-            const boton =
-                document.getElementById("botonCursos");
-
-            const cursosGuardados =
-                JSON.parse(
-                    localStorage.getItem("cursosAsignados")
-                ) || [];
-
-            const texto =
-                boton.querySelector("small");
-
-            if (cursosGuardados.length > 0) {
-
-                texto.textContent =
-                    cursosGuardados.join(", ");
-
-            } else {
-
-                texto.textContent =
-                    "Seleccionar cursos";
-
-            }
-
-        }
-
-
-        /* =================================================
-           GUARDAR CAMBIOS
-           ================================================= */
-
-        document
-            .getElementById("guardarCambios")
-            .addEventListener("click", function () {
-
-                const nombre =
-                    document.getElementById(
-                        "nombreApellido"
-                    ).value;
-
-                const correo =
-                    document.getElementById(
-                        "correoElectronico"
-                    ).value;
-
-                const telefono =
-                    document.getElementById(
-                        "numeroTelefono"
-                    ).value;
-
-                const cargo =
-                    document.getElementById(
-                        "cargo"
-                    ).value;
-
-
-                localStorage.setItem(
-                    "nombreApellido",
-                    nombre
-                );
-
-                localStorage.setItem(
-                    "correoElectronico",
-                    correo
-                );
-
-                localStorage.setItem(
-                    "numeroTelefono",
-                    telefono
-                );
-
-                localStorage.setItem(
-                    "cargo",
-                    cargo
-                );
-
-
-                alert("¡Cambios guardados correctamente!");
-
-            });
-
-
-        /* =================================================
-           CERRAR MODALES AL HACER CLIC AFUERA
-           ================================================= */
-
-        window.addEventListener("click", function (evento) {
-
-            if (evento.target === modalMaterias) {
-
-                modalMaterias.style.display = "none";
-
-            }
-
-            if (evento.target === modalCursos) {
-
-                modalCursos.style.display = "none";
-
-            }
-
-        });
-
-    </script>
+    <script src="perfil.js"></script>
 
 </body>
 
 </html>
-```
